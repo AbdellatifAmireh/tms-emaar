@@ -1,0 +1,16 @@
+tms-emaar.online, www.tms-emaar.online {
+	encode gzip
+	log
+
+	tls abdellatif.amireh95@gmail.com
+
+	reverse_proxy backend:${BACKEND_PORT}
+
+	header {
+		Access-Control-Allow-Origin https://tms-emaar.vercel.app
+		Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+		Access-Control-Allow-Headers "Content-Type, Authorization"
+	}
+	@options method OPTIONS
+	respond @options 204
+}
