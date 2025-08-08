@@ -58,5 +58,13 @@ app.delete("/tasks/:id", async (req, res) => {
   res.status(204).send();
 });
 
+// const PORT = Number(process.env.PORT) || 4000;
+// connectDB().then(() => app.listen(PORT, () => console.log(`API http://localhost:${PORT}`)));
+
 const PORT = Number(process.env.PORT) || 4000;
-connectDB().then(() => app.listen(PORT, () => console.log(`API http://localhost:${PORT}`)));
+
+connectDB().then(() => {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`API listening on port ${PORT}`);
+  });
+});
