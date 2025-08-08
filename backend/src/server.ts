@@ -8,8 +8,16 @@ import Task from "./models/Task.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+
+// Middlewares
 app.use(express.json());
+
+// CORS config
+app.use(cors({
+  origin: ["https://tms-emaar.vercel.app"],
+  methods: ["GET","POST","PUT","DELETE"]
+}));
 
 // Validation
 const CreateTask = z.object({
