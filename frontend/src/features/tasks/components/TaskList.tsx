@@ -10,7 +10,7 @@ export default function TaskList({ items, onToggle, onDelete }: Props) {
   if (items.length === 0) {
     return (
       <div className="mt-10 text-center text-neutral-500 dark:text-neutral-400">
-        No tasks yet add your first one
+        No tasks
       </div>
     );
   }
