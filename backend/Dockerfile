@@ -1,4 +1,4 @@
-# build TS
+# Build TypeScript
 FROM node:20 AS build
 WORKDIR /app
 COPY package*.json ./
@@ -7,7 +7,7 @@ COPY tsconfig.json ./
 COPY src ./src
 RUN npm run build
 
-# run the app
+# Run the app
 FROM node:20
 WORKDIR /app
 ENV NODE_ENV=production

@@ -1,6 +1,7 @@
 import { Schema, model } from "mongoose";
 
-const TaskSchema = new Schema(
+//Task Model
+const Task = new Schema(
   {
     title: { type: String, required: true },
     description: String,
@@ -10,4 +11,4 @@ const TaskSchema = new Schema(
   { versionKey: false }
 );
 
-export default model("Task", TaskSchema);
+export default model("Task", Task);

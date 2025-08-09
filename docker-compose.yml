@@ -20,6 +20,7 @@ services:
       - PORT=${BACKEND_PORT}
       - MONGO_URI=mongodb://${MONGO_ROOT_USER}:${MONGO_ROOT_PASS}@mongo:27017/${MONGO_DB_NAME}?authSource=admin
       - NODE_ENV=production
+      - ALLOWED_ORIGINS=https://tms-emaar.vercel.app,https://tms-emaar.online,http://localhost:5173,http://127.0.0.1:5173
     ports:
       - "${BACKEND_PORT}:${BACKEND_PORT}"
     depends_on:

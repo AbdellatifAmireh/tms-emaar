@@ -1,18 +1,16 @@
 {
-  "name": "backend",
+  "name": "tms-backend",
+  "description": "Task Management System Backend for EMAAR",
+  "author": "Abdellatif Amireh",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "eslint ."
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
@@ -26,5 +24,6 @@
     "@types/node": "^24.2.0",
     "tsx": "^4.20.3",
     "typescript": "^5.9.2"
-  }
+  },
+  "license": "ISC"
 }
